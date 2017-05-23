@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "sourceMap": true,
+    "outDir": "js",
+    "noImplicitAny": true,
+    "watch": true
+  }
+}
