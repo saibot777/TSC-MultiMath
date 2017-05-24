@@ -1,18 +1,34 @@
 function startGame() {
 
-    let playerName : string = 'Stefan';
+    let playerName : string | undefined = getInputValue('playername');
     logPlayer(playerName);
 
-    let messageElement : HTMLElement | null = document.getElementById('messages');
-    messageElement!.innerText = 'Welcome to MultiMath! Starting new game...';
-    console.log('Starting new game.')
+    postScore(100, playerName);
 }
 
-function logPlayer(name:any) {
+function logPlayer(name: string = 'Frenzie Player'):void {
     console.log(`New game starting for player: ${name}`);
 }
 
-document.getElementById('startGame')!.addEventListener('click', startGame);
+function postScore(score: number, playerName?: string): void {
+    let scoreElement: HTMLElement | null = document.getElementById('postedScores');
+    scoreElement!.innerText = `${score} - ${playerName}`;
+}
+
+function getInputValue(elementID: string): string | undefined {
+
+    let inputElement: HTMLInputElement = <HTMLInputElement>document.getElementById(elementID);
+
+    if (inputElement.value === '') {
+        return undefined;
+    }
+    else {
+        return inputElement.value;
+    }
+
+}
+
+document.getElementById('startGame').addEventListener('click', startGame);
 
 
 
