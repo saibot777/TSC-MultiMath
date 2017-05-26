@@ -1,10 +1,10 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "sourceMap": true,
-    "outDir": "js",
-    "noImplicitAny": true,
-    "watch": true,
-    "strictNullChecks": true
-  }
+    "compilerOptions": {
+        "target": "es5",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "watch": true,
+        "outDir": "js",
+        "strictNullChecks": true
+    }
 }
