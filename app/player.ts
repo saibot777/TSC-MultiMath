@@ -1,14 +1,11 @@
-/**
- * Created by stefan.trajkovic on 27.5.2017..
- */
-///<reference path="person.ts"/>
+import { Person } from './person';
 
-class Player implements Person {
+export class Player implements Person {
     name: string;
     age: number;
     highScore: number;
-
+    
     formatName() {
-        return this.name.toLocaleUpperCase();
+        return this.name.toUpperCase();
     }
 }
